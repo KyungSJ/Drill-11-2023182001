@@ -127,6 +127,7 @@ class Run:
 class Boy:
 
     def __init__(self):
+        self.ball = None
         self.x, self.y = 400, 90
         self.face_dir = 1
         self.ball_count = 10
