@@ -55,9 +55,9 @@ class Zombie:
                 Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y, 200, 200)
         elif self.hp == 1:
             if self.dir < 0:
-                Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y, 100, 100)
+                Zombie.images['Walk'][int(self.frame)].composite_draw(0, 'h', self.x, self.y-50, 100, 100)
             else:
-                Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y, 100, 100)
+                Zombie.images['Walk'][int(self.frame)].draw(self.x, self.y-50, 100, 100)
         elif self.hp == 0:
             game_world.remove_object(self)
 

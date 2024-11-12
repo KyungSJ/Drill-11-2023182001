@@ -162,6 +162,7 @@ class Boy:
             self.ball_count -= 1
             ball = Ball(self.x, self.y, self.face_dir*10)
             game_world.add_object(ball)
+            game_world.add_collision_pair('ball:zombie', ball, None)
 
     def get_bb(self):
         # 네개의 값을 리턴하는데, 사실 한개의 튜플
@@ -172,4 +173,6 @@ class Boy:
         # fill here
         if group == 'boy:ball':
             self.ball_count += 1
+        if group == 'boy:zombie':
+            game_framework.quit()
         pass

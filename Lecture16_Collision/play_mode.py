@@ -46,10 +46,14 @@ def init():
     for ball in balls:
         game_world.add_collision_pair('boy:ball', None, ball)
 
-    game_world.add_collision_pair('ball:zombie', boy.ball, None)
 
     for zombie in zombies:
         game_world.add_collision_pair('ball:zombie', None, zombie)
+
+    game_world.add_collision_pair('boy:zombie', boy, None)
+
+    for zombie in zombies:
+        game_world.add_collision_pair('boy:zombie', None, zombie)
 
 def finish():
     game_world.clear()
