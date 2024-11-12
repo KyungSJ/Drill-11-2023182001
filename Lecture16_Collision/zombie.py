@@ -67,7 +67,10 @@ class Zombie:
         pass
 
     def get_bb(self):
-        return self.x-80,self.y-100,self.x+80,self.y+100
+        if self.hp == 2:
+            return self.x-80,self.y-100,self.x+80,self.y+100
+        elif self.hp == 1:
+            return self.x-40,self.y-100,self.x+40,self.y
 
     def handle_collision(self, group, other):
         if group == 'ball:zombie':

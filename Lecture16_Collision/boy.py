@@ -166,8 +166,8 @@ class Boy:
 
     def get_bb(self):
         # 네개의 값을 리턴하는데, 사실 한개의 튜플
-        return self.x-20, self.y-50, self.x+20, self.y+50
-        pass
+        return  self.x-20, self.y-50, self.x+20, self.y+50
+
 
     def handle_collision(self, group, other):
         # fill here
